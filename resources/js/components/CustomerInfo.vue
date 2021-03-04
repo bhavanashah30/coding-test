@@ -67,6 +67,7 @@
                           budget: this.budget
                       })})
                   .then(function (response) {
+                      console.log(response.data);
                       swal2({
                           title: 'Success',
                           text: response.data,
@@ -74,6 +75,9 @@
                           type: 'success',
                           confirmButtonText: 'OK'
                       })
+                          .then(function (result) {
+                              window.location.reload();
+                          })
                   })
                   .catch(function (error) {
                       swal2({
@@ -83,6 +87,9 @@
                           type: 'error',
                           confirmButtonText: 'OK'
                       })
+                          .then(function (result) {
+                              window.location.reload();
+                          })
                   })
 
           }
