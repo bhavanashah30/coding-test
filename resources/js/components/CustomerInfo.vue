@@ -67,10 +67,22 @@
                           budget: this.budget
                       })})
                   .then(function (response) {
-                      console.log(response.data);
+                      swal2({
+                          title: 'Success',
+                          text: response.data,
+                          confirmButtonColor: '#dd4b39',
+                          type: 'success',
+                          confirmButtonText: 'OK'
+                      })
                   })
                   .catch(function (error) {
-                      console.log(error);
+                      swal2({
+                          title: 'Error',
+                          text: 'Error Saving Information, please try again later.',
+                          confirmButtonColor: '#dd4b39',
+                          type: 'error',
+                          confirmButtonText: 'OK'
+                      })
                   })
 
           }
